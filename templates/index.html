@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cole's Portfolio</title>
+  <meta name="description" content="Education, experience, and projects." />
+
+  <style>
+    :root{
+      --bg: rgb(16, 16, 16);
+      --text: white;
+      --muted: white;
+      --line: white;
+      --panel: rgb(16, 16, 16);
+      --link: rgb(16, 16, 16);
+      --max: 860px;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body{
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height: 1.6;
+    }
+
+    a{ color: var(--link); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .container{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 56px 18px 80px;
+    }
+
+    header{
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 26px;
+    }
+
+    h1{
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .subtitle{
+      margin: 10px 0 0;
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 16px;
+    }
+
+    .links{
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      color: black;
+    }
+
+    .links a{
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+    }
+
+    section{
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:first-of-type{ padding-top: 0px; }
+
+    section:last-of-type{ border-bottom: none; }
+
+    h2{
+      margin: 0 0 12px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .list{
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .item{
+      padding: 14px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .top{
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .title{
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .meta{
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .linkcolor {
+      color: white;
+    }
+
+    .when{
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .desc{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tags{
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag{
+      font-size: 12px;
+      color: white;
+      border: 1px solid var(--line);
+      background: rgb(16, 16, 16);
+      padding: 3px 8px;
+      border-radius: 999px;
+    }
+
+    .reveal{
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 420ms ease, transform 420ms ease;
+    }
+    .reveal.in{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer{
+      padding-top: 26px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header class="reveal">
+      <h1>Cole M. Puls</h1>
+      <p class="subtitle">
+       I build end-to-end systems, including Pico, a personalized voice assistant built on a Raspberry Pi, and 2Will, a two-wheeled self-balancing robot controled by an ESP32 and tuned using PID.
+      </p>
+
+      <div class="links">
+        <a class="linkcolor" href="https://github.com/colepuls">GitHub</a>
+        <a class="linkcolor" href="https://www.linkedin.com/in/colepuls">LinkedIn</a>
+        <a class="linkcolor" href="mailto:colepuls@me.com">colepuls@me.com</a>
+      </div>
+    </header>
+
+    <section id="skills" class="reveal">
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <div class="skill-group">
+            <div class="skill-list">
+                <span>Python,</span>
+                <span>C/C++</span>
+            </div>
+            </div>
+
+            <div class="skill-group">
+            <div class="skill-list">
+                <span>PyTorch,</span>
+                <span>OpenCV,</span>
+                <span>Flask,</span>
+                <span>React,</span>
+                <span>Node.js</span>
+            </div>
+            </div>
+
+            <div class="skill-group">
+            <div class="skill-list">
+                <span>Linux,</span>
+                <span>Git,</span>
+                <span>Raspberry Pi,</span>
+                <span>ESP32,</span>
+                <span>Arduino</span>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="education" class="reveal">
+      <h2>Education</h2>
+      <ul class="list">
+        <li class="item">
+          <div class="top">
+            <div>
+              <p class="title">University of Missouri, B.S. Computer Science</p>
+              <p class="meta">Focus: Robotics / Embedded / ML • GPA: 3.5</p>
+            </div>
+            <div class="when">2023 — 2027</div>
+          </div>
+          <p class="desc">
+            Currently a Junior, expected to graduate in May 2027.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience" class="reveal">
+      <h2>Experience</h2>
+      <ul class="list">
+        <li class="item">
+          <div class="top">
+            <div>
+              <p class="title">Undergraduate Research Assistant - Autonomous Systems Lab</p>
+              <p class="meta">University of Missouri</p>
+            </div>
+            <div class="when">Sept 2025 — Present</div>
+          </div>
+          <p class="desc">
+            Conducting autonomy, perception, and motion research using the Boston Dynamics Spot quadruped. 
+            Contributing to Spot SDK and ROS2-based integration supporting higher-level robot mobility and behaviors.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">ROS2</span>
+            <span class="tag">Bosdyn Dynamics Spot SDK</span>
+          </div>
+        </li>
+        <li class="item">
+          <div class="top">
+            <div>
+              <p class="title">Software Engineering Intern - Langford Mechanical & Sheet Metal, INC.</p>
+              <p class="meta">Jackson, MO (Hybrid)</p>
+            </div>
+            <div class="when">May 2025 — Aug 2025</div>
+          </div>
+          <p class="desc">
+            Developed and deployed a cross-platform mobile app (iOS & Android) used by field foremen to log job activity, labor hours, and photos.
+            Implemented Firebase Authentication and Firestore for secure login and real-time data synchronization across devices.
+            Built a Node.js/Express REST API with image uploads (Multer) and automated email reporting (Nodemailer).
+            System is used company-wide by field operations.
+          </p>
+          <div class="tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Node.js</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2>Projects</h2>
+      <ul class="list">
+        <li class="item">
+          <div class="top">
+            <div>
+              <p class="title">Pico</p>
+              <p class="meta">Desktop Robot Assistant (Raspberry Pi 5, Arduino UNO R3)</p>
+            </div>
+            <div class="when">
+              <a class="linkcolor" href="https://github.com/colepuls/Pico">GitHub</a>
+            </div>
+          </div>
+          <p class="desc">
+           Pico is a fully offline personal robot built using Raspberry Pi and Arduino, focused on real time audio, vision, and control. I designed and deployed a custom always on wake word model in PyTorch, implemented face tracking with MediaPipe and OpenCV, and built a robust Pi to Arduino serial control system for motion. The system runs local command handling without cloud services and is packaged in a 3D-printed enclosure integrating camera, audio, servos, and a visual display.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Torchaudio</span>
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="top">
+            <div>
+              <p class="title">2Will</p>
+              <p class="meta">Two-Wheeled Self-Balancing Robot (ESP32)</p>
+            </div>
+            <div class="when">
+              <a class="linkcolor" href="https://github.com/colepuls/2Will">GitHub</a>
+            </div>
+          </div>
+          <p class="desc">
+            2Will is a two-wheeled self-balancing robot built around an ESP32, focused on real-time sensor fusion, control systems, and embedded motor control. I am implementing IMU-based state estimation using a 9-axis IMU and developing a PID control loop to maintain balance and stability. The system integrates motor encoders, a dual motor driver, and onboard power regulation, with modular firmware designed for iterative tuning and experimentation. The robot is being developed as a hands-on platform for learning balance control, embedded systems, and real-time feedback loops.
+          </p>
+          <div class="tags">
+            <span class="tag">C++</span>
+            <span class="tag">PlatformIO</span>
+            <span class="tag">PID Control</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="reveal">
+      © <span id="year"></span> Cole Puls
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const els = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) e.target.classList.add("in");
+      }
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
